@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="empDetails"
+            type="com.milsmile.databindingdemo.javaex4_image.EmployeeModel" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".javaex4_image.JavaEx4MainActivity">
+<TextView
+    android:text="@{empDetails.name}"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+    <ImageView
+        android:background="@{empDetails.imgUrl}"
+        android:layout_width="100sp"
+        android:layout_height="100sp"/>
+</LinearLayout>
+</layout>
