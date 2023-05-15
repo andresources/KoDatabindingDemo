@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.milsmile.databindingdemo.example3_recyclerview.DataModel" />
+        <variable
+            name="editClickListener"
+            type="com.milsmile.databindingdemo.example3_recyclerview.EditClickListener" />
+        <variable
+            name="deleteClickListener"
+            type="com.milsmile.databindingdemo.example3_recyclerview.DeleteClickListener" />
+    </data>
+    <LinearLayout
+        android:id="@+id/ll"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvAndroidName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{model.androidName}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <TextView
+            android:id="@+id/tvAndroidVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{model.androidVersion}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <TextView
+                android:id="@+id/tvDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:onClick="@{()->deleteClickListener.deleteClicked(model)}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+            <TextView
+                android:id="@+id/tvEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->editClickListener.editClicked(model)}"
+                android:text="Edit"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+    </LinearLayout>
+    </LinearLayout>
+</layout>
