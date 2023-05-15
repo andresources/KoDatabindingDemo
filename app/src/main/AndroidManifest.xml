@@ -11,14 +11,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DatabindingDemo"
         tools:targetApi="31">
-        <!-- android:name=".example1.MainActivity"  for activity -->
+        <activity
+            android:name=".JavaEx2MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".JavaEx1MainActivity"
+            android:exported="false" /> <!-- android:name=".example1.MainActivity"  for activity -->
         <!-- FragmentActivityDemo for fragment -->
-        <!--Example3RecylerViewActivity-->
+        <!-- Example3RecylerViewActivity -->
         <activity
             android:name=".example3_recyclerview.Example3RecylerViewActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
