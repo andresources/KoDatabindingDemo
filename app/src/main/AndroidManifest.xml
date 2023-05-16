@@ -26,7 +26,7 @@
         <!-- FragmentActivityDemo for fragment -->
         <!-- Example3RecylerViewActivity -->
         <activity
-            android:name=".javaex6livedata.Ex6LiveDataMainActivity"
+            android:name=".javaex7fragment.Ex7MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
